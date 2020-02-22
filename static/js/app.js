@@ -1,7 +1,7 @@
 //getting demographic information from metaData
 
 function buildDemography(sample) {
-  d3.json("../samples.json").then((importdata) => {
+  d3.json("samples.json").then((importdata) => {
       var data = importdata;
       console.log(data);
       //getting all the data from json file
@@ -92,7 +92,7 @@ function buildCharts(sample) {
 function init() {
   var select_option = d3.select("#selDataset");
 
-  d3.json("../samples.json").then((importdata) => {
+  d3.json("samples.json").then((importdata) => {
       var id = importdata.names;
       id.forEach((sample) => {
           select_option.append('option').text(sample).property("value", sample);
