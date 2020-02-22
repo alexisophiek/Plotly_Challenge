@@ -26,7 +26,7 @@ function buildDemography(sample) {
 
 //building the horizontal bargraph and bubble graph
 function buildCharts(sample) {
-  d3.json("../samples.json").then((importdata) => {
+  d3.json("samples.json").then((importdata) => {
       var sample_data = importdata.samples;
       console.log(sample_data)
 
